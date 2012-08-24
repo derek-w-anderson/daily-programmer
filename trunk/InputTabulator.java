@@ -55,7 +55,7 @@ public class InputTabulator {
         String[] headers = { "Name", "Address", "Description" };
         String[][] data = {
             { "reddit",     "www.reddit.com",   "the frontpage of the internet" },
-            { "Wikipedia", 	"en.wikipedia.net",	"The Free Encyclopedia" },
+            { "Wikipedia",  "en.wikipedia.net", "The Free Encyclopedia" },
             { "xkcd",       "xkcd.com",         "Sudo make me a sandwich." }
         };
         new InputTabulator(headers, data).printTable();
