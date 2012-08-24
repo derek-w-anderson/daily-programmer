@@ -5,20 +5,22 @@ import java.util.Stack;
  */
 public class RPNCalculator
 {
-	public static void main(String[] args) {
-		String input = "3 4 * 6 2 - +";
-
-		Stack<Integer> ops = new Stack<Integer>();
-		for (String x : input.split(" ")) {
-			if (x.matches("[0-9]+")) {
-				ops.push(Integer.parseInt(x));
-			} else {
-				int b = ops.pop(), a = ops.pop();
-				if ("+".equals(x)) ops.push(a + b);
-				if ("-".equals(x)) ops.push(a - b);
-				if ("*".equals(x)) ops.push(a * b);
-			}
-		}
-		System.out.println(ops.pop());
-	}
+    public static void solve(String input) {
+        java.util.Stack<Integer> ops = new java.util.Stack<Integer>();
+        for (String x : input.split(" ")) {
+            if (x.matches("[-]?[0-9]+")) {
+                ops.push(Integer.parseInt(x));
+            } else {
+                int b = ops.pop(), a = ops.pop();
+                if ("+".equals(x)) ops.push(a + b);
+                if ("-".equals(x)) ops.push(a - b);
+                if ("*".equals(x)) ops.push(a * b);
+            }
+        }
+        System.out.println(ops.pop());
+    }
+    
+    public static void main(String[] args) {
+        RPNCalculator.solve("3 4 * 6 2 - +");
+    }
 }
