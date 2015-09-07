@@ -1,0 +1,1 @@
+All solutions courtesy of Derek Anderson (ander1dw).
